@@ -3,7 +3,7 @@ var lineOnePartOne = [];
 var lineOnePartTwo = [];
 var lineOne = [];
 
-function checkInput (height, Length, symbol) {
+function checkInput (height, symbol) {
 	var symbolUsed = document.getElementById("characterInput").value ;
 	var height = document.getElementById("heightOfTree").value ;
 	for (var i = 0; i < height; i++) {
@@ -11,12 +11,12 @@ function checkInput (height, Length, symbol) {
 	} 
 	lineOnePartTwo.push(symbolUsed);
 	lineOne = lineOnePartOne.concat(lineOnePartTwo);
-	console.log(lineOne.toString());
+	console.log(lineOne.join(""));
 	for (var i = 0; i < height; i++) {
 		lineOne.shift();
 		lineOne.push(symbolUsed);
 		lineOne.push(symbolUsed);
-		console.log(lineOne.toString());
+		console.log(lineOne.join(""));
 	}
 }
 // 	console.log(lineOnePartOne);
